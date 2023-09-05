@@ -1,3 +1,7 @@
 django
-rest_framework
+djangorestframework
+djangorestframework-simplejwt
+algoliasearch==3.0.0
+algoliasearch-django==3.0.0
 django-cors-headers
+gunicorn

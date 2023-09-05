@@ -1,0 +1,18 @@
+version: '3.8'
+
+networks:
+  mynetwork:
+    driver: bridge
+
+services:
+  backend:
+    tty: true
+    restart : always
+    ports:
+     - "8000:8000"
+    command: ["./tweetme/build/entrypoint.sh"]
+    build:
+     context: ./tweetme
+     dockerfile: ./build/Dockerfile
+    networks:
+      - mynetwork

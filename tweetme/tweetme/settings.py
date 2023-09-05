@@ -27,14 +27,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "tweets",
-    "usertesster",
     "api",
+    "search",
+    "usertesster",
     "rest_framework",
     "rest_framework.authtoken",
     "corsheaders",
     'rest_framework_simplejwt',
     "algoliasearch_django",
-    "search"
 ]
 
 MIDDLEWARE = [
