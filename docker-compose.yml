@@ -16,3 +16,15 @@ services:
      dockerfile: ./build/Dockerfile
     networks:
       - mynetwork
+  
+  frontend:
+    build:
+      context: .
+      dockerfile: client-side/Dockerfile
+    volumes:
+      - ./client-side:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    command: ["npm", "start"]
+
