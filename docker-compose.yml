@@ -6,13 +6,17 @@ networks:
 
 services:
   backend:
+    # keep container running even if it dont have task to do
     tty: true
     restart : always
     ports:
      - "8000:8000"
+    # run  command at specific file path
     command: ["./tweetme/build/entrypoint.sh"]
     build:
+    #  file chosen to be built
      context: ./tweetme
+     # cd to dockerfile from the curent context build ./tweetme , full location including context is ./tweetme/build/Dockerfile
      dockerfile: ./build/Dockerfile
     networks:
       - mynetwork
