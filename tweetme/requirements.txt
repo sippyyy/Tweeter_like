@@ -5,3 +5,4 @@ algoliasearch==3.0.0
 algoliasearch-django==3.0.0
 django-cors-headers
 gunicorn
+python-dotenv==1.0.0

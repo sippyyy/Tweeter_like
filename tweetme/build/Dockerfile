@@ -22,8 +22,9 @@ COPY --chown=sipy:sipy build/ /tweetme/build/
 COPY --chown=sipy:sipy . /tweetme/
                     # all files of dev tweetme to virtual tweetme of Dockerfile       
 # Install requirements and set execute permissions for the entrypoint.sh
-RUN pip install --no-cache-dir -r /tweetme/requirements.txt && \
-    chmod +x /tweetme/build/entrypoint.sh
+RUN pip install --no-cache-dir -r /tweetme/requirements.txt
+RUN chmod +x /tweetme/build/entrypoint.sh
+
     
 USER sipy
 # Set the entry point for the container (it will access to the path and run all the commands of that path)

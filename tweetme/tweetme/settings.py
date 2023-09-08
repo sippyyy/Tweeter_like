@@ -2,13 +2,16 @@
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-pp6ls*(__sccj#50f1c#vxu#+r13bi1=^p*c!l(ad4_)p(!7rv"
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -191,6 +194,6 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / "static-root"  
 
 ALGOLIA = {
-    'APPLICATION_ID': 'BNO1XNMAW1',
-    'API_KEY': 'e18211d8f486214607676afa12c4f41d'
+    'APPLICATION_ID': os.environ.get('ALGOLIA_APPLICATION_ID'),
+    'API_KEY': os.environ.get('ALGOLIA_API_KEY')
 }

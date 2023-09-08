@@ -9,6 +9,10 @@ services:
     # keep container running even if it dont have task to do
     tty: true
     restart : always
+    environment:
+      - SECRET_KEY=django-insecure-pp6ls*(__sccj#50f1c#vxu#+r13bi1=^p*c!l(ad4_)p(!7rv
+      - ALGOLIA_APPLICATION_ID=BNO1XNMAW1
+      - ALGOLIA_API_KEY=e18211d8f486214607676afa12c4f41d
     ports:
      - "8000:8000"
     # run  command at specific file path
